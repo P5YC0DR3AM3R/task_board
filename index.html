@@ -31,76 +31,94 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModalLabel">New Project</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           </button>
         </div>
         <div class="modal-body">
           <!-- Form Inside Modal -->
           <form id="project-form">
             <div class="form-group">
-              <label for="project-name-input">Project Title: </label>
-              <input type="text" class="form-control" id="project-name-input" placeholder="Enter project name" required>
+              <label for="project-name-input">Project Title</label>
+              <input
+                id="project-name-input"
+                type="text"
+                class="form-control"
+                placeholder="Enter Project Title"
+                aria-label="Project Name" 
+                required>
             </div>
             <div class="form-group">
-              <label for="project-name-input">Project description: </label>
-              <input type="text" class="form-control" id="project-description-input" placeholder="Enter project description" required>
+              <label for="project-description-input">Project Description</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="project-description-input" 
+                placeholder="Enter Project Description" 
+                aria-label="Project Description" 
+                required>
             </div>
             <div class="form-group">
-              <label for="taskDueDate">Deadline Date: </label>
-              <input type="text" class="form-control" id="taskDueDate" placeholder="Enter due date" required>
+              <label for="taskDueDate">Deadline Date</label>
+              <input
+                placeholder="Select Task Due Date"
+                autocomplete="off"
+                type="text"
+                class="form-control mb-3"
+                id="taskDueDate" 
+                required>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save Project</button>
+              <button type="submit" class="btn btn-primary">Post Task</button>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <div class="row swim-lanes text-center justify-content-between">
-      <div class="col-12 col-lg-4 d-flex">
-        <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
-          <div class="card-header bg-white">
-            <h2 class="card-title mb-1">To Do</h2>
-          </div>
-          <div class="card-body bg-light">
-            <div id="todo-cards"></div>
-          </div>
+  </div>
+  <div class="row swim-lanes text-center justify-content-between">
+    <div class="col-12 col-lg-4 d-flex">
+      <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
+        <div class="card-header bg-white">
+          <h2 class="card-title mb-1">To Do</h2>
+        </div>
+        <div class="card-body bg-light">
+          <div id="todo-cards"></div>
         </div>
       </div>
-      <div class="col-12 col-lg-4 d-flex">
-        <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
-          <div class="card-header bg-white">
-            <h2 class="card-title mb-1">In Progress</h2>
-          </div>
-          <div class="card-body bg-light">
-            <div id="in-progress-cards"></div>
-          </div>
+    </div>
+    <div class="col-12 col-lg-4 d-flex">
+      <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
+        <div class="card-header bg-white">
+          <h2 class="card-title mb-1">In Progress</h2>
+        </div>
+        <div class="card-body bg-light">
+          <div id="in-progress-cards"></div>
         </div>
       </div>
-        <div class="col-12 col-lg-4 d-flex">
-          <div id="done" class="card border-light mb-3 lane flex-grow-1">
-            <div class="card-header bg-white">
-              <h2 class="card-title mb-1">Done</h2>
-            </div>
-            <div class="card-body bg-light">
-              <div id="done-cards"></div>
-          </div>
+    </div>
+    <div class="col-12 col-lg-4 d-flex">
+      <div id="done" class="card border-light mb-3 lane flex-grow-1">
+        <div class="card-header bg-white">
+          <h2 class="card-title mb-1">Done</h2>
+        </div>
+        <div class="card-body bg-light">
+          <div id="done-cards"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+
   <script src="./assets/js/script.js"></script>
 </body>
 

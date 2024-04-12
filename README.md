@@ -1,100 +1,67 @@
 # 05 Third-Party APIs: Task Board
 
-## Your Task
+## Your Task Board
 
-Create a simple task board application that allows a team to manage project tasks by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Created a simple task board application that allows a team to manage project tasks by submitting through a popup form. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery, Day.js, and Bootstrap.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with dates. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+### - What was your motivation?
+I was motivated to build this page using jQuery and Day.js for the first time. I am excited to learn more about it.
+### - Why did you build this project?
+To create a functioning Project List that includes a visual deadline for instant recognition of due dates. This was also designed to practice using all of the things that I have learned in class.
+### - What problem does it solve?
+It provides a single place to view my upcoming projects.
+### - What did you learn?
+Web API, jQuery, Day.js, Bootstrap, and UUid.
 
-## User Story
+## Table of Contents (Optional)
 
-```md
-AS A project team member with multiple tasks to organize
-I WANT a task board 
-SO THAT I can add individual project tasks, manage their state of progress and track overall project progress accordingly
-```
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-## Acceptance Criteria
+## Installation
 
-```md
-GIVEN a task board to manage a project
-WHEN I open the task board
-THEN the list of project tasks is displayed in columns representing the task progress state (Not Yet Started, In Progress, Completed)
-WHEN I view the task board for the project
-THEN each task is color coded to indicate whether it is nearing the deadline (yellow) or is overdue (red)
-WHEN I click on the button to define a new task
-THEN I can enter the title, description and deadline date for the new task into a modal dialog
-WHEN I click the save button for that task
-THEN the properties for that task are saved in localStorage
-WHEN I drag a task to a different progress column
-THEN the task's progress state is updated accordingly and will stay in the new column after refreshing
-WHEN I click the delete button for a task
-THEN the task is removed from the task board and will not be added back after refreshing
-WHEN I refresh the page
-THEN the saved tasks persist
-```
+Code written in HTML5, CSS, and JavaScript to present as a website to use as an example of quality of work and design knowledge.
 
-The following animation demonstrates the application functionality:
+## Usage
 
-![A user adds three tasks to the task board and changes the state of two of them to in progress and then completion. The user then deletes the two cards in the done column.](./Assets/05-third-party-apis-homework-demo.gif)
+https://p5yc0dr3am3r.github.io/task_board/
 
-## Grading Requirements
+![Screenshot of final page](./assets/images/Screenshot.png)
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Credits
 
-This Challenge is graded based on the following criteria:
+Discord group and in class instruction.
+Consulted ChatGPT, Bootstrap, jQuery, Day.js, Zoom cloud recordings, MDN Web Docs.
 
-### Technical Acceptance Criteria: 40%
+## License
 
-* Satisfies all of the above acceptance criteria plus the following:
+Copyright (c) 2012-2024 Scott Chacon and others
 
-  * Uses the Day.js library to work with dates
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-### Deployment: 32%
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-* Application deployed at live URL
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-* Application loads with no errors
 
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+<pre>
+ ____   ___  _  _  ___  __  ____  ____  ____   __   _  _  ____  ____ 
+(  _ \ / __)( \/ )/ __)/  \(    \(  _ \( __ \ / _\ ( \/ )( __ \(  _ \
+ ) __/(___ \ )  /( (__(  0 )) D ( )   / (__ (/    \/ \/ \ (__ ( )   /
+(__)  (____/(__/  \___)\__/(____/(__\_)(____/\_/\_/\_)(_/(____/(__\_)
+</pre>
