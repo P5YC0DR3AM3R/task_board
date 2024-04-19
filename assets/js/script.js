@@ -8,12 +8,7 @@ const projectDateInputEl = $('#taskDueDate');
 // Retrieve tasks and nextId from localStorage
 let projects = JSON.parse(localStorage.getItem("projects")) || [];
 let nextId = JSON.parse(localStorage.getItem("nextId")) || 0;
-// ? Helper function that displays the time, this is called every second in the setInterval function below.
-function displayTime() {
-  const rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
-  timeDisplayEl.text(rightNow);
-}
-  
+
 function readProjectsFromStorage() {
     
     // TODO: Retrieve projects from localStorage and parse the JSON to an array. If there are no projects in localStorage, initialize an empty array and return it.
@@ -30,7 +25,9 @@ function saveProjectsToStorage(projects) {
 // Todo: create a function to generate a unique task id
 // UUid
 
-
+function generateTaskId() {
+  return crypto.randomUUID();
+}
 
 // TODO: Create a new card element and add the classes `card`, `project-card`, `draggable`, and `my-3`. Also add a `data-project-id` attribute and set it to the project id.
 function createProjectCard(project) {
@@ -96,7 +93,7 @@ function printProjectData() {
     } else if (project.status === 'done') {
       doneList.append(createProjectCard(project));
     }
-  }
+  };
 
   // ? Use JQuery UI to make task cards draggable
   $('.draggable').draggable({
@@ -126,17 +123,18 @@ function handleDeleteProject() {
 // TODO: Loop through the projects array and remove the project with the matching id.
   console.log(projects);
     // ? Remove project from the array. There is a method called `filter()` for this that is better suited which we will go over in a later activity. For now, we will use a `forEach()` loop to remove the project.
-  projects.projects.forEach((project) => {
-    if (project.id === projectId) {
-      projects.projects.splice(projects.projects.indexOf(project), 1);
+  let allProjects = projects.projects.filter((project) => {
+    if (project.id !== projectId) {
+      return project;
     }
   });
   
     // ? We will use our helper function to save the projects to localStorage
-    saveProjectsToStorage(projects);
+    saveProjectsToStorage(allProjects);
   
     // ? Here we use our other function to print projects back to the screen
-    printProjectData(projects);
+    printProjectData(allProjects);
+    window.location.reload();
   }
   
   // ? Adds a project to local storage and prints the project data
@@ -151,16 +149,13 @@ function handleDeleteProject() {
   
     // ? Create a new project object with the data from the form
     const newProject = {
-      // ? Here we use a tool called `crypto` to generate a random id for our project. This is a unique identifier that we can use to find the project in the array. `crypto` is a built-in module that we can use in the browser and Nodejs.
-
       name: projectName,
       description: projectDescription,
       dueDate: projectDate,
       status: 'to-do',
+      id: generateTaskId(),
     };
-  
-    // ? Pull the projects from localStorage and push the new project to the array
-    // const projects = readProjectsFromStorage();
+
     projects.push(newProject);
   
     // ? Save the updated projects array to localStorage
@@ -202,10 +197,6 @@ function handleDeleteProject() {
   
   // TODO: Add an event listener to listen for the delete buttons. Use event delegation to call the `handleDeleteProject` function.
   projectDisplayEl.on('click', '.btn-delete-project', handleDeleteProject);
-  
-  // ? Call the `displayTime` function once on page load and then every second after that.
-  displayTime();
-  setInterval(displayTime, 1000);
   
   // ? When the document is ready, print the project data to the screen and make the lanes droppable. Also, initialize the date picker.
   $(document).ready(function () {
