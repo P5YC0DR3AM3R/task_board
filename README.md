@@ -1,3 +1,9 @@
+> **Status:** classroom exercise, 2024. Not a Phygital-DevOps production app.
+>
+> Browser kanban board. No backend. Tasks live in the browser only.
+>
+> 2026 baseline: secrets stay out of source, Actions are pinned, placeholder packages are gone, CI checks this tree.
+
 # 05 Third-Party APIs: Task Board
 
 ## Your Task Board
@@ -28,7 +34,7 @@ Code written in HTML5, CSS, and JavaScript to present as a website to use as an 
 
 https://p5yc0dr3am3r.github.io/task_board/
 
-![Screenshot of final page](./assets/images/Screenshot.png)
+![Screenshot of final page](./assets/images/Screenshot.webp)
 
 ## Credits
 
